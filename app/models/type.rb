@@ -12,5 +12,6 @@
 class Type < ActiveRecord::Base
   
   # ActiveRecord Relations
-  belongs_to :category
+  belongs_to :category, inverse_of: :types
+  has_many :products, inverse_of: :type
 end

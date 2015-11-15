@@ -9,4 +9,8 @@
 #
 
 class Category < ActiveRecord::Base
+
+  # ActiveRecord Relations
+  has_many :types, inverse_of: :category
+  has_many :products, through: :types, inverse_of: :category
 end
