@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+clothing = Category.create(name: 'Clothing')
+shirts = Type.create(name: 'Shirts', 
+                     category: clothing)
+test_shirt = Product.create(name: 'Test Shirt',
+                            price: '12.00',
+                            type: shirts)
